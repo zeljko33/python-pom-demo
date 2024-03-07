@@ -1,3 +1,6 @@
+import time
+import webbrowser
+
 import pytest
 from Tests.test_BasePage import BaseTest
 from Pages.LoginPage import LoginPage
@@ -19,3 +22,4 @@ class TestLogin(BaseTest):
     def test_login(self):
         self.loginPage = LoginPage(self.driver)
         self.loginPage.do_login(TestData.USER_NAME, TestData.PASSWORD)
+        time.sleep(10)
